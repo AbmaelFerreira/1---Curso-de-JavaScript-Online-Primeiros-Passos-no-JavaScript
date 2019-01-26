@@ -1,14 +1,9 @@
-var nome = [
-    'abmael', 'Ana Cristina','Joao Pedro'
-]
+var peso = 80
+var altura = 1.83
+
+var imc = peso / (altura * altura)
 
 
+imc++
 
-
-var pessoa = {
-    nome : 'abmeael',
-    idade : 25,
-    cidade : 'Cuiaba'
-}
-
-console.log(pessoa.nome, pessoa.idade, pessoa.cidade)
+console.log('Imc = ',imc)
