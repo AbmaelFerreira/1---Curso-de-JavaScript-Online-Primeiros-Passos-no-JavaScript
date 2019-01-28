@@ -1,43 +1,33 @@
-var compraRefrigerante = false
-var compraCerveja =  false
-var  compraSucoNatual = false
+function imc (altura, peso){
+    return peso / (altura * altura)
+}
 
-var convidados = [
+var pessoas = [
         {   nome:'Abmael',
-            idade:20,
-            bebeCerveja: false,
-            bebeRefrigerante:true 
+            altura:1.70,
+            peso:40
         },
         {
             nome:'Maria',
-            idade:17,
-            bebeCerveja: false,
-            bebeRefrigerante:false 
+            altura:1.80,
+            peso:50
         },
         {
             nome:'Joao',
-            idade:19,
-            bebeCerveja: true,
-            bebeRefrigerante:true 
+            altura:1.50,
+            peso:100 
         }
     ]
 
-
-var compraCerveja = false
-
-console.log(convidados.length)
+   
 
 
-for(var i = 0; i < convidados.length; i++){
-    console.log(convidados[i].nome, convidados[i].bebeCerveja)
-    if(convidados[i].bebeCerveja){
-        compraCerveja = true
-        break
+    for(var pessoa of pessoas ){
+        resultado = imc(pessoa.altura ,pessoa.peso)
+        console.log(pessoa.nome, resultado)
     }
-}
 
 
-console.log(compraCerveja)
 
 
 
