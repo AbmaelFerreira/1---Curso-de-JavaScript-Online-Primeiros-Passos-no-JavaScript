@@ -1,9 +1,19 @@
-var peso = 80
-var altura = 1.83
+var compraRefrigerante = false
+var compraCerveja =  false
+var  compraSucoNatual = false
 
-var imc = peso / (altura * altura)
+var convidado = {
+    nome:'Abmael',
+    idade:17,
+    bebeCerveja: true,
+    bebeRefrigerante:false 
+}
 
+if(convidado.bebeRefrigerante){
+    compraRefrigerante = true
+} else if(convidado.bebeCerveja && convidado.idade >= 18){
+    compraCerveja = true
+}
 
-imc++
+console.log(compraCerveja)
 
-console.log('Imc = ',imc)
