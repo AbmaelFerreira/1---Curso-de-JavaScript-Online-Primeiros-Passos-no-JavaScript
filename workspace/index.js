@@ -2,18 +2,43 @@ var compraRefrigerante = false
 var compraCerveja =  false
 var  compraSucoNatual = false
 
-var convidado = {
-    nome:'Abmael',
-    idade:17,
-    bebeCerveja: true,
-    bebeRefrigerante:false 
+var convidados = [
+        {   nome:'Abmael',
+            idade:20,
+            bebeCerveja: false,
+            bebeRefrigerante:true 
+        },
+        {
+            nome:'Maria',
+            idade:17,
+            bebeCerveja: false,
+            bebeRefrigerante:false 
+        },
+        {
+            nome:'Joao',
+            idade:19,
+            bebeCerveja: true,
+            bebeRefrigerante:true 
+        }
+    ]
+
+
+var compraCerveja = false
+
+console.log(convidados.length)
+
+
+for(var i = 0; i < convidados.length; i++){
+    console.log(convidados[i].nome, convidados[i].bebeCerveja)
+    if(convidados[i].bebeCerveja){
+        compraCerveja = true
+        break
+    }
 }
 
-if(convidado.bebeRefrigerante){
-    compraRefrigerante = true
-} else if(convidado.bebeCerveja && convidado.idade >= 18){
-    compraCerveja = true
-}
 
 console.log(compraCerveja)
+
+
+
 
